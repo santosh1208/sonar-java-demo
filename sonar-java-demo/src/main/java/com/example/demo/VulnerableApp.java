@@ -13,11 +13,9 @@ public class VulnerableApp {
     private static final String DATABASE_PASSWORD = "MySecretPassword123!"; // VULNERABILITY 1
 
     public static void main(String[] args) {
-        System.out.println("Starting VulnerableApp demo...");
         // This input is intentionally malicious for the demo to show SQL Injection
         String userId = "admin'; DROP TABLE users;--";
         fetchUser(userId);
-        System.out.println("VulnerableApp demo finished.");
     }
 
     public static void fetchUser(String userId) {
